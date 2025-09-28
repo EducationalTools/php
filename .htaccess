@@ -1,0 +1,9 @@
+# Enable RewriteEngine
+RewriteEngine On
+
+# If the requested resource is not an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Send everything to index.php
+RewriteRule ^ index.php [L]
